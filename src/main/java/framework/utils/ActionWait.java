@@ -4,12 +4,13 @@ import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.function.Function;
 
 public class ActionWait extends WebDriverWait {
 
     public ActionWait() {
-        super(WebDriverRunner.getWebDriver(), TestHelper.TIMEOUT);
+        super(WebDriverRunner.getWebDriver(), Duration.ofSeconds(TestHelper.TIMEOUT));
     }
 
     /**

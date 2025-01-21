@@ -12,7 +12,6 @@ public class TestHelper {
 
     public static void openBrowser(){
         PageFactory.init();
-        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         Selenide.open("http://yandex.ru");
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
